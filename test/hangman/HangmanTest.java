@@ -9,7 +9,6 @@ import org.junit.Test;
 public class HangmanTest {
 
 	
-	Hangman hangman = new Hangman();
 	
 	@Test
 	public void noTriesLeft() {
@@ -23,7 +22,7 @@ public class HangmanTest {
 				" |  |         |\n" +
 				"_|__|_________|\n";
 		
-		String actual = hangman.hangmanStringFor(0);
+		String actual = Hangman.hangmanStringFor(0);
 		
 		assertThat(actual, is(equalTo(expected)));
 	}
@@ -40,7 +39,7 @@ public class HangmanTest {
 				" |  |         |\n" +
 				"_|__|_________|\n";
 		
-		String actual = hangman.hangmanStringFor(1);
+		String actual = Hangman.hangmanStringFor(1);
 		
 		assertThat(actual, is(equalTo(expected)));
 	}
@@ -57,7 +56,7 @@ public class HangmanTest {
 				" |  |         |\n" +
 				"_|__|_________|\n";
 		
-		String actual = hangman.hangmanStringFor(2);
+		String actual = Hangman.hangmanStringFor(2);
 		
 		assertThat(actual, is(equalTo(expected)));
 	}
@@ -74,7 +73,7 @@ public class HangmanTest {
 				" |  |         |\n" +
 				"_|__|_________|\n";
 		
-		String actual = hangman.hangmanStringFor(3);
+		String actual = Hangman.hangmanStringFor(3);
 		
 		assertThat(actual, is(equalTo(expected)));
 	}
@@ -90,13 +89,13 @@ public class HangmanTest {
 				" |  ___________\n" +
 				" |  |         |\n" +
 				"_|__|_________|\n";
-		String actual = hangman.hangmanStringFor(4);
+		String actual = Hangman.hangmanStringFor(4);
 		
 		assertThat(actual, is(equalTo(expected)));
 	}
 	
 	@Test(expected = RuntimeException.class)
 	public void exceptionThrownWithInvalidInput() {
-		hangman.hangmanStringFor(30);
+		Hangman.hangmanStringFor(30);
 	}
 }

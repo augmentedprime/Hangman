@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class Letters {
 
-	public String drawLetters(Set<String> letters, String correct){
+	public static String drawLetters(Set<String> letters, String correct){
 		
 		String result = ""; 
 		

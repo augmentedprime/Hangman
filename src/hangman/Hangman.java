@@ -2,7 +2,7 @@ package hangman;
 
 public class Hangman {
 
-	public String hangmanStringFor(int tries) {
+	public static String hangmanStringFor(int tries) {
 
 		String expected = null;
 
@@ -59,7 +59,9 @@ public class Hangman {
 		break;
 		default : throw new RuntimeException("Number too big (like Matt's dick(dick))");
 		}
-
+		
+		
+		
 		System.out.println(expected);
 		return expected;
 	}
