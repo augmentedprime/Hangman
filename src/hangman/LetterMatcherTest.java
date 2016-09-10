@@ -44,5 +44,4 @@ public class LetterMatcherTest {
 		boolean test = gay.match("", "Matt's Dick");
 		assertFalse(test);
 	}
-
 }
