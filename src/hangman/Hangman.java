@@ -59,9 +59,6 @@ public class Hangman {
 		break;
 		default : throw new RuntimeException("Number too big (like Matt's dick(dick))");
 		}
-		
-		
-		
 		System.out.println(expected);
 		return expected;
 	}

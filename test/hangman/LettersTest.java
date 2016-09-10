@@ -19,7 +19,7 @@ public class LettersTest {
 		alreadyGuessed.add("m");
 		alreadyGuessed.add("f");
 		alreadyGuessed.add("t");
-
+		
 
 		Letters.drawLetters(alreadyGuessed, "I am the best");
 		assertThat(alreadyGuessed, is(equalTo(alreadyGuessed)));
