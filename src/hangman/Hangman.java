@@ -1,8 +1,8 @@
 package hangman;
 
-public class DrawHangman {
+public class Hangman {
 
-	public String draw(int tries) {
+	public String hangmanStringFor(int tries) {
 
 		String expected = null;
 

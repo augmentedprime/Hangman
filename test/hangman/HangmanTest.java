@@ -6,10 +6,10 @@ import static org.hamcrest.CoreMatchers.*;
 
 import org.junit.Test;
 
-public class DrawHangmanTest {
+public class HangmanTest {
 
 	
-	DrawHangman hangman = new DrawHangman();
+	Hangman hangman = new Hangman();
 	
 	@Test
 	public void noTriesLeft() {
@@ -23,7 +23,7 @@ public class DrawHangmanTest {
 				" |  |         |\n" +
 				"_|__|_________|\n";
 		
-		String actual = hangman.draw(0);
+		String actual = hangman.hangmanStringFor(0);
 		
 		assertThat(actual, is(equalTo(expected)));
 	}
@@ -40,7 +40,7 @@ public class DrawHangmanTest {
 				" |  |         |\n" +
 				"_|__|_________|\n";
 		
-		String actual = hangman.draw(1);
+		String actual = hangman.hangmanStringFor(1);
 		
 		assertThat(actual, is(equalTo(expected)));
 	}
@@ -57,7 +57,7 @@ public class DrawHangmanTest {
 				" |  |         |\n" +
 				"_|__|_________|\n";
 		
-		String actual = hangman.draw(2);
+		String actual = hangman.hangmanStringFor(2);
 		
 		assertThat(actual, is(equalTo(expected)));
 	}
@@ -74,7 +74,7 @@ public class DrawHangmanTest {
 				" |  |         |\n" +
 				"_|__|_________|\n";
 		
-		String actual = hangman.draw(3);
+		String actual = hangman.hangmanStringFor(3);
 		
 		assertThat(actual, is(equalTo(expected)));
 	}
@@ -90,13 +90,13 @@ public class DrawHangmanTest {
 				" |  ___________\n" +
 				" |  |         |\n" +
 				"_|__|_________|\n";
-		String actual = hangman.draw(4);
+		String actual = hangman.hangmanStringFor(4);
 		
 		assertThat(actual, is(equalTo(expected)));
 	}
 	
 	@Test(expected = RuntimeException.class)
 	public void exceptionThrownWithInvalidInput() {
-		hangman.draw(30);
+		hangman.hangmanStringFor(30);
 	}
 }
