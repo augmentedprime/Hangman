@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class AcceptWord {
 	Scanner user = new Scanner(System.in);
 
-	public String getWord(){
+	public void getWord(AppState appState){
 		System.out.println("Pick a word");
-		String word = user.nextLine();
-		System.out.println("Your word is " + word + ".");
-		return word;
+		String userInput = user.nextLine();
+		appState.setWord(userInput);
+		System.out.println("Your word is " + appState.getWord() + ".");
 	}
 }
