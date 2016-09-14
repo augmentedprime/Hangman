@@ -8,7 +8,7 @@ public class AppState {
 	private final int initialCount = 4;
 	private int hangmanCount;
 	private String word;
-	private Set<String> guesses = new HashSet<String>();
+	private Set<String> guesses;
 	
 	
 	public void decCount(){
@@ -50,9 +50,9 @@ public class AppState {
 
 	
 	
-	public AppState(String word, Set<String> guesses){
+	public AppState(String word){
 		this.word = word;
-		this.guesses = guesses;
+		this.guesses = new HashSet<String>();
 		this.hangmanCount = this.initialCount;
 	}
 }
