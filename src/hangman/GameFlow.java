@@ -14,6 +14,10 @@ public class GameFlow {
 		//set the word
 		acceptWord.getWord(appState);
 		
+		for (int i=0; i<20; i++){
+			System.out.println();
+		}
+		
 		while (appState.getHangmanCount() < 5){
 			
 		//print out current hangman/letters
