@@ -50,8 +50,8 @@ public class AppState {
 
 	
 	
-	public AppState(String word){
-		this.word = word;
+	public AppState(){
+		this.word = "";
 		this.guesses = new HashSet<String>();
 		this.hangmanCount = this.initialCount;
 	}
