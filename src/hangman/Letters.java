@@ -22,7 +22,6 @@ public class Letters {
 
 			} else result += "_";
 		}
-		System.out.println(result);
 		return result;
 	}	
 }

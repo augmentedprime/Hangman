@@ -1,5 +1,6 @@
 package hangman;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class AppState {
@@ -7,10 +8,16 @@ public class AppState {
 	private final int initialCount = 4;
 	private int hangmanCount;
 	private String word;
-	private Set<String> guesses;
+	private Set<String> guesses = new HashSet<String>();
 	
 	
+	public void decCount(){
+		hangmanCount--;
+	}
 	
+	public void addGuess(String x) {
+		guesses.add(x);
+	}
 	
 	public int getHangmanCount() {
 		return hangmanCount;

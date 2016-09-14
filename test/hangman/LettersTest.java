@@ -21,7 +21,7 @@ public class LettersTest {
 		alreadyGuessed.add("t");
 		
 
-		Letters.drawLetters(alreadyGuessed, "I am the best");
-		assertThat(alreadyGuessed, is(equalTo(alreadyGuessed)));
+		String answer = Letters.drawLetters(alreadyGuessed, "I am the best");
+		assertThat(answer, is(equalTo("I _m t__ ___t")));
 	}
 }
